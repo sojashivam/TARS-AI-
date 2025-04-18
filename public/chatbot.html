@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+  <meta charset="UTF-8">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tars AI | Chat with Documents</title>
+   
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/chatbot.css">
+
+</head>
+
+<body>
+    <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="./images/TARS (2).png" alt="Tars AI Logo">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="docs.html">Documents</a></li>
+          <li><a href="chatbot.html">Tars</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="api.html">API</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main class="section-padding">
+        <div class="container">
+      <section class="hero-section">
+        <h1>Tars AI: Chat with Your Documents</h1>
+        <p class="lead">Instantly get answers, summaries, and
+        insights from your PDFs and images using advanced AI.</p>
+      </section>
+
+      <section>
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <h3>Quick Answers</h3>
+            <p>Ask specific questions about your document content and get instant, accurate answers.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Document Summaries</h3>
+            <p>Generate concise summaries of lengthy reports, articles, or books.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Image Analysis</h3>
+            <p>Understand diagrams, charts, and scanned text within images.</p>
+          </div>
+  
+        </div>
+      </section>
+
+      <section>
+        <h2>How it Works</h2>
+        <div class="how-it-works-steps">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Upload Your File</h3>
+              <p>Choose a PDF or image file from your device.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>AI Processes Content</h3>
+              <p>Our AI quickly analyzes the text and images within your document.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Start Chatting</h3>
+              <p>Ask questions in the chat interface and receive relevant information.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+            <div class="chatbot-container-wrapper">
+            <div class="chatbot-container">
+                <div class="upload-area" id="uploadArea">
+                    <h3>Upload Your Document</h3>
+                    <p>Upload a PDF or image to start chatting with our AI</p>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                    <label for="fileInput" class="upload-btn">Choose File</label>
+                    <p id="fileName" style="margin-top: 10px;"></p>
+                  </div>
+
+                <div class="chat-interface" id="chatInterface" style="display: none;">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            Hello! I've processed your document. What would you like to know about it?
+                          </div>
+                      </div>
+                    <div class="chat-input-container">
+                          <input type="text" id="chatInput" class="chat-input" placeholder="Ask a question...">
+                          <button id="sendBtn" class="send-btn">Send</button>
+                      </div>
+                  </div>
+              </div>
+      </div>
+
+         
+    </div>
+      </main>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Chat with Your Documents?</h2>
+      <p>Upload your first document now and experience the power of Tars AI.</p>
+      <a href="#uploadArea" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tars AI. All rights reserved.</p>
+            </div>
+      </footer>
+
+     
+  <script src="js/chatbot.js"></script>
+</body>
+
+</html>

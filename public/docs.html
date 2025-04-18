@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tars AI | Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/docs.css">
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/TARS (2).png" alt="Tars AI Logo">
+                    </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="docs.html">Documents</a></li>
+                    <li><a href="chatbot.html">Tars</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="api.html">API</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="docs-layout">
+
+                <aside class="docs-sidebar">
+                    <h3>Documentation Topics</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#file-types">Supported File Types</a></li>
+                        <li><a href="#asking-questions">Asking Questions</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="#api-access">API Access</a></li>
+                        <li><a href="#security">Security & Privacy</a></li>
+                    </ul>
+                </aside>
+
+                <div class="docs-content">
+                    <h1>Tars AI Documentation</h1>
+
+                    <section id="introduction">
+                        <h2>Introduction</h2>
+                        <p>Welcome to the Tars AI documentation. Here you'll find comprehensive information on how to effectively use our AI-powered document analysis service, understand its features, and troubleshoot common issues.</p>
+                        <p>Tars AI allows you to upload PDF documents and images, then interact with their content through a conversational chat interface to extract information, get summaries, and gain insights quickly.</p>
+                    </section>
+
+                    <section id="getting-started">
+                        <h2>Getting Started</h2>
+                        <p>Using Tars AI is straightforward. Follow these simple steps to begin interacting with your documents:</p>
+                        <ol>
+                            <li>Navigate to the main <a href="index.html">Tars AI application</a> or chatbot interface page.</li>
+                            <li>Use the designated upload area or button to select your PDF document or image file from your device.</li>
+                            <li>Wait a few moments while Tars AI securely processes and analyzes your document's content. The duration depends on the file size and complexity.</li>
+                            <li>Once processing is complete, the chat interface will become active. Start typing your questions about the document content into the chat input field.</li>
+                        </ol>
+                    </section>
+
+                    <section id="file-types">
+                        <h2>Supported File Types & Limits</h2>
+                        <p>Tars AI currently supports the following file types for analysis:</p>
+                        <ul>
+                            <li>PDF documents (<code>.pdf</code>) - Both text-based and scanned (OCR support required, check your plan features).</li>
+                            <li>Images (<code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>) - Useful for analyzing diagrams, charts, or scanned pages saved as images.</li>
+                        </ul>
+                        <p>Please note the following limitations (these may vary based on your subscription plan):</p>
+                        <ul>
+                            <li><strong>Maximum File Size:</strong> Typically around <code>10MB</code> - <code>50MB</code>. Refer to your plan details.</li>
+                            <li><strong>Maximum Page Count:</strong> Limits may apply per document (e.g., <code>20</code> pages for Free, <code>100</code> pages for Pro).</li>
+                        </ul>
+                    </section>
+
+                    <section id="asking-questions">
+                        <h2>Asking Effective Questions</h2>
+                        <p>To get the most accurate and relevant answers from Tars AI, consider these tips when formulating your questions:</p>
+                        <ul>
+                            <li><strong>Be Specific:</strong> Instead of "What is this document about?", ask "What are the key findings mentioned in the conclusion section?".</li>
+                            <li><strong>Reference Context:</strong> If possible, mention page numbers or section titles, e.g., "Summarize the main points on page 5." or "What methodology is described in Chapter 3?".</li>
+                            <li><strong>One Question at a Time:</strong> Avoid asking multiple unrelated questions in a single message for clearer responses.</li>
+                            <li><strong>Start Broad, Then Narrow:</strong> Ask a general question first (e.g., "What is the main topic?") to understand the structure, then follow up with specific queries.</li>
+                            <li><strong>Use Keywords:</strong> Include relevant keywords from the document in your question.</li>
+                        </ul>
+                    </section>
+
+                    <section id="troubleshooting">
+                        <h2>Troubleshooting Common Issues</h2>
+                        <p>If you encounter problems while using Tars AI, here are some steps to try:</p>
+                        <ul>
+                            <li><strong>Document Legibility:</strong> Ensure the source document (especially scanned PDFs or images) is clear and legible. Poor quality scans can hinder accuracy.</li>
+                            <li><strong>File Size/Page Limits:</strong> Verify that your file does not exceed the maximum size or page count allowed by your current plan.</li>
+                            <li><strong>File Corruption:</strong> The uploaded file might be corrupted. Try opening it locally or uploading a different version or file.</li>
+                            <li><strong>Processing Errors:</strong> Occasionally, processing might fail. Try re-uploading the document after a short wait.</li>
+                            <li><strong>Unclear Answers:</strong> If the AI's answer seems incorrect or vague, try rephrasing your question with more specific details or context.</li>
+                            <li><strong>Contact Support:</strong> If problems persist after trying these steps, please reach out to our support team via the <a href="contact.html">Contact page</a>, providing details about the issue and the document (if possible).</li>
+                        </ul>
+                    </section>
+
+                     <section id="api-access">
+                        <h2>API Access</h2>
+                        <p>For developers looking to integrate Tars AI's capabilities into their own applications or workflows, we offer API access on specific plans (typically Enterprise).</p>
+                        <p>Please refer to the dedicated <a href="api.html">API Documentation</a> page (if available) or contact our sales team through the <a href="contact.html">Contact page</a> for details on API endpoints, authentication, usage limits, and pricing.</p>
+                     </section>
+
+                     <section id="security">
+                        <h2>Security & Privacy</h2>
+                        <p>We prioritize the security and privacy of your documents and data.</p>
+                         <ul>
+                            <li>Documents are processed over secure connections (HTTPS).</li>
+                            <li>Uploaded documents are typically stored temporarily for processing and analysis during your active session and may be deleted afterwards according to our data retention policy.</li>
+                            <li>We do not use your document content to train our general AI models unless explicitly stated and agreed upon.</li>
+                            <li>Refer to our official Privacy Policy and Terms of Service for detailed information on data handling and security measures.</li>
+                         </ul>
+                    </section>
+
+                </div></div></div></main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tars AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </body>
+</html>

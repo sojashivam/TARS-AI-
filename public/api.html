@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tars AI Chatbot | API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="./images/TARS (2).png"alt="">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="docs.html">Documents</a></li>
+          <li><a href="chatbot.html">Tars</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="api.html">API</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>API Documentation</h2>
+        <p>Integrate PDFChat's capabilities into your own applications with our API. This documentation will guide you through using our Mistral AI-powered PDF and image analysis API.</p>
+      </section>
+
+      <section>
+        <h2>Authentication</h2>
+        <p>To use the PDFChat API, you'll need an API key. Sign up for an account and generate your API key from the dashboard.</p>
+        <p>Include your API key in the header of each request:</p>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+          Authorization: Bearer YOUR_API_KEY
+        </div>
+      </section>
+
+      <section>
+        <h2>Endpoints</h2>
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Upload Document</h3>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+          POST /api/v1/documents
+        </div>
+        <p>Upload a PDF or image file for processing.</p>
+        <p><strong>Request:</strong> Multipart form data with 'file' field</p>
+        <p><strong>Response:</strong></p>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+{<br>
+  "document_id": "doc_12345",<br>
+  "status": "processing",<br>
+  "filename": "example.pdf"<br>
+}
+        </div>
+
+        <h3 style="margin-top: 20px; margin-bottom: 10px;">Ask Question</h3>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+          POST /api/v1/documents/{document_id}/query
+        </div>
+        <p>Ask a question about a previously uploaded document.</p>
+        <p><strong>Request Body:</strong></p>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+{<br>
+  "query": "What is the main conclusion of the paper?"<br>
+}
+        </div>
+        <p><strong>Response:</strong></p>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0; font-family: monospace;">
+{<br>
+  "answer": "The main conclusion of the paper is that...",<br>
+  "confidence": 0.92<br>
+}
+        </div>
+      </section>
+
+      <section>
+        <h2>Rate Limits</h2>
+        <p>Our API has the following rate limits:</p>
+        <p>
+          • Free tier: 100 requests per day<br>
+          • Basic tier: 1,000 requests per day<br>
+          • Professional tier: 10,000 requests per day
+        </p>
+        <p>If you exceed these limits, you'll receive a 429 Too Many Requests response.</p>
+      </section>
+
+      <section>
+        <h2>Error Codes</h2>
+        <p>The API may return the following error codes:</p>
+        <p>
+          • 400: Bad Request - Check your request parameters<br>
+          • 401: Unauthorized - Invalid API key<br>
+          • 404: Not Found - Document not found<br>
+          • 429: Too Many Requests - Rate limit exceeded<br>
+          • 500: Internal Server Error - Please contact support
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Tars AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

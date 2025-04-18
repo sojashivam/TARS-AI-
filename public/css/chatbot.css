@@ -1,0 +1,856 @@
+/* CSS Variables (Consistent across pages) */
+:root {
+    --primary-color: #4F46E5;
+    /* Indigo */
+    --secondary-color: #10B981;
+    /* Emerald */
+    --dark-color: #1F2937;
+    /* Cool Gray 800 */
+    --light-color: #F9FAFB;
+    /* Cool Gray 50 */
+    --text-color: #374151;
+    /* Cool Gray 700 */
+    --muted-color: #6B7280;
+    /* Cool Gray 500 */
+    --white-color: #FFFFFF;
+    --border-color: #E5E7EB;
+    /* Cool Gray 200 */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --radius-small: 4px;
+    --radius-medium: 8px;
+}
+
+/* Global Reset and Base Styles (Consistent across pages) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    /* Ensure html takes full height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    display: flex;
+    /* Flexbox for sticky footer/full height layout */
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure body takes at least full viewport height */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Adjust heading sizes for general content */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* More space above h2 */
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+
+p {
+    margin-bottom: 1.2rem;
+    color: var(--muted-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul,
+ol {
+    list-style-position: outside;
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+ul li,
+ol li {
+    margin-bottom: 0.6rem;
+    color: var(--text-color);
+}
+
+ul ul,
+ol ol {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+code {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-small);
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0.5rem auto 2rem auto;
+    /* Center and add space */
+}
+
+
+/* Utility Classes (Consistent across pages) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-padding {
+    padding: 2rem 0;
+    /* Increased padding for main sections */
+}
+
+/* Header & Navigation (Consistent across pages) */
+header {
+    background-color: var(--white-color);
+    padding-bottom: 1rem ;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.logo img {
+    height: 50px; /* Adjust height as needed */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    background: none;
+    padding-top: 0;
+}
+
+.nav-links li{
+    list-style: none;
+    /* Remove default list style */
+    margin: 0;
+    padding: 0;
+    /* Reset padding and margin for list items */
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--text-color);
+}
+.nav-links a:hover,
+.nav-links a.active { /* Add 'active' class to current page link if needed */
+    color: var(--primary-color);
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    /* Allow main content to take remaining height */
+    display: flex;
+    /* Use flex to manage sections */
+    flex-direction: column;
+}
+
+.hero-section{
+    background-image: url(../images/tars2.jpg);
+    width: 100%;
+    /* height: 100vh; */
+    background-size: cover;
+}
+
+.hero-section h1 {
+    color: var(--white-color);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 600;
+    /* Space above heading */
+}   
+
+.hero-section p {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    /* Space below paragraph */
+}
+
+main .container {
+    display: flex;
+    /* Use flex to stack sections within the container */
+    flex-direction: column;
+    align-items: center;
+
+  
+    /* Center content horizontally */
+}
+
+
+main>.container>section {
+    /* margin-bottom: 4rem; */
+    /* Space between main sections */
+    text-align: center;
+    /* Center content in these sections */
+    width: 100%;
+    /* Sections take full width of container */
+}
+
+main>.container>section:last-of-type {
+    margin-bottom: 0;
+    /* No bottom margin on the last section before CTA/Footer */
+}
+
+
+main>.container>section h2 {
+    margin-bottom: 1.5rem;
+    /* More space below section headings */
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    /* Shrink underline to text width */
+}
+
+main>.container>section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* Align underline to the left of the h2 text */
+    bottom: 0;
+    /* transform: translateX(-50%); Removed */
+    width: 100%;
+    /* Underline width */
+    height: 3px;
+    background-color: var(--secondary-color);
+    /* Accent color underline */
+    border-radius: 2px;
+}
+
+/* Feature Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive grid */
+    gap: 2rem;
+    margin-top: 2.5rem;
+    /* Space below h2 */
+    text-align: left;
+    /* Align feature text left */
+    width: 100%;
+    /* Ensure grid takes full width */
+}
+
+.feature-item {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--radius-medium);
+    /* Consistent radius */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    /* Slightly stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+.feature-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.feature-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    /* Slightly darker paragraph text in features */
+}
+
+/* How it Works Steps */
+.how-it-works-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    /* Space below h2 */
+    width: 100%;
+    /* Ensure steps take full width */
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.step-number {
+    flex-shrink: 0;
+    /* Prevent number from shrinking */
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 1.5rem;
+    border: 2px solid var(--primary-color);
+    /* Outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.step-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--muted-color);
+}
+
+/* Call to Action */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), #6A5EEB);
+    /* Gradient background */
+    color: var(--white-color);
+    padding: 4rem 1.5rem;
+    /* More padding */
+    text-align: center;
+    margin-top: 4rem;
+    /* Space above CTA */
+}
+
+.cta-section h2 {
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.cta-section h2::after {
+    background-color: var(--secondary-color);
+    /* Accent color underline for CTA */
+    height: 4px;
+    /* Thicker underline for CTA */
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    /* Lighter text on primary background */
+    margin-bottom: 2.5rem;
+    /* More space below paragraph */
+    max-width: 700px;
+    /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 1.1rem 2.8rem;
+    /* Larger padding */
+    border: none;
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Button shadow */
+}
+
+.cta-button:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+    /* Lift slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Chatbot Specific Styles */
+.chatbot-container-wrapper {
+    margin-top: 3rem;
+    /* Space above the chat interface */
+    width: 100%;
+    max-width: 800px;
+    /* Match max width of chatbot container */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    /* Space below the chat interface before footer or next section */
+}
+
+.chatbot-container {
+    width: 100%;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-medium);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Hide overflowing content */
+    min-height: 500px;
+    /* Minimum height for the chat area */
+    flex-grow: 1;
+    /* Allow container to grow */
+}
+
+.upload-area {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    /* Allow upload area to take available space when chat is hidden */
+}
+
+.upload-area h3 {
+    margin-bottom: 0.5rem;
+}
+
+.upload-area p {
+    margin-bottom: 1.5rem;
+    color: var(--muted-color);
+}
+
+/* Hide the default file input */
+.file-input {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-bottom: 10px;
+    /* Space between button and file name */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn:hover {
+    background-color: #4338CA;
+    /* Slightly darker primary color */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.upload-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#fileName {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    word-break: break-all;
+    /* Prevent long file names from overflowing */
+    padding: 0 1rem;
+    /* Add padding to prevent text touching edges */
+}
+
+
+.chat-interface {
+    display: flex;
+    /* Use flexbox for chat messages and input */
+    flex-direction: column;
+    flex-grow: 1;
+    /* Allow chat interface to take available space */
+    height: 100%;
+    /* Take height of chatbot-container */
+}
+
+.chat-messages {
+    flex-grow: 1;
+    /* Messages area takes up remaining space */
+    padding: 1.5rem;
+    overflow-y: auto;
+    /* Add scroll for messages */
+    display: flex;
+    flex-direction: column;
+    /* Stack messages vertically */
+    gap: 1rem;
+    /* Space between messages */
+}
+
+.message {
+    max-width: 80%;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius-medium);
+    line-height: 1.5;
+    word-wrap: break-word;
+    /* Break long words */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow on messages */
+}
+
+.bot-message {
+    background-color: var(--light-color);
+    /* Light background for bot */
+    color: var(--dark-color);
+    align-self: flex-start;
+    /* Align bot messages to the left */
+    border-bottom-left-radius: 2px;
+    /* Sharper corner on the 'sender' side */
+}
+
+.user-message {
+    background-color: var(--primary-color);
+    /* Primary color for user */
+    color: var(--white-color);
+    align-self: flex-end;
+    /* Align user messages to the right */
+    border-bottom-right-radius: 2px;
+    /* Sharper corner on the 'sender' side */
+}
+
+.chat-input-container {
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    /* Space between input and button */
+    align-items: center;
+    background-color: var(--white-color);
+    /* Ensure input area has background */
+    flex-shrink: 0;
+    /* Prevent input area from shrinking */
+}
+
+.chat-input {
+    flex-grow: 1;
+    /* Input takes up most space */
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-small);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.send-btn {
+    background-color: var(--secondary-color);
+    /* Use secondary color for send */
+    color: var(--white-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    flex-shrink: 0;
+    /* Prevent button from shrinking */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn:hover {
+    background-color: #059669;
+    /* Slightly darker secondary color */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.send-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer (Consistent across pages) */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto;
+    /* Push footer to the bottom in flex layout */
+    flex-shrink: 0;
+    /* Prevent footer from shrinking */
+}
+
+footer p {
+    color: var(--border-color);
+    margin-bottom: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 767px) {
+
+    /* Adjust padding for smaller screens */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-padding {
+        padding: 2.5rem 0;
+        /* Adjusted padding */
+    }
+
+    header {
+        padding: 0.8rem 0;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    main>.container>section {
+        margin-bottom: 3rem;
+        /* Space between main sections */
+    }
+
+    main>.container>section h2 {
+        margin-bottom: 1rem;
+    }
+
+    main>.container>section h2::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    .features-grid {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .feature-item {
+        padding: 1rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+
+    .how-it-works-steps {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .step-item {
+        flex-direction: column;
+        /* Stack step number and content */
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        /* Add space below number */
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+    }
+
+
+    .cta-section {
+        padding: 3rem 1rem;
+        margin-top: 3rem;
+    }
+
+    .cta-section p {
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+
+
+    .chatbot-container-wrapper {
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .chatbot-container {
+        min-height: 400px;
+    }
+
+    .upload-area,
+    .chat-messages {
+        padding: 1rem;
+    }
+
+    .upload-area p {
+        margin-bottom: 1rem;
+    }
+
+    .upload-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+
+    .chat-input-container {
+        padding: 0.8rem 1rem;
+        gap: 0.8rem;
+    }
+
+    .chat-input,
+    .send-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .message {
+        max-width: 95%;
+        /* Allow messages to take a bit more width on small screens */
+        padding: 0.7rem 1rem;
+    }
+
+    .chat-messages {
+        gap: 0.8rem;
+        /* Reduce space between messages */
+    }
+}
+
+@media (min-width: 768px) {
+    .step-item {
+        /* Ensure horizontal layout on larger screens */
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .step-number {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+        /* Remove bottom margin from mobile */
+    }
+}

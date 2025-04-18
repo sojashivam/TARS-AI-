@@ -1,0 +1,244 @@
+
+/* CSS Variables (Consistent with index.html) */
+:root {
+    --primary-color: #4F46E5; /* Indigo */
+    --secondary-color: #10B981; /* Emerald */
+    --dark-color: #1F2937; /* Cool Gray 800 */
+    --light-color: #F9FAFB; /* Cool Gray 50 */
+    --text-color: #374151; /* Cool Gray 700 */
+    --muted-color: #6B7280; /* Cool Gray 500 */
+    --white-color: #FFFFFF;
+    --border-color: #E5E7EB; /* Cool Gray 200 */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Reset and Base Styles (Consistent with index.html) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
+    margin-bottom: 1rem; /* Adjusted margin */
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Specific heading sizes for docs */
+h1 { font-size: 2.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;}
+h2 { font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;}
+h3 { font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.8rem; }
+
+p {
+    margin-bottom: 1.2rem; /* Slightly more spacing */
+    color: var(--muted-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul, ol {
+    list-style-position: outside; /* Indent list content */
+    margin-left: 1.5rem; /* Indentation space */
+    /* margin-bottom: 1.2rem; */
+}
+ul li, ol li {
+    margin-bottom: 0.6rem; /* Space between list items */
+    color: var(--text-color);
+}
+ul ul, ol ol {
+     margin-top: 0.6rem;
+     margin-bottom: 0.6rem;
+}
+
+code {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utility Classes (Consistent with index.html) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+ .section-padding {
+    padding: 3rem 0; /* Slightly less padding for docs sections */
+}
+
+
+/* Header & Navigation (Consistent with index.html) */
+header {
+    background-color: var(--white-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--text-color);
+}
+.nav-links a:hover,
+.nav-links a.active { /* Style for active link */
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Documentation Page Specific Layout */
+.docs-layout {
+    display: flex;
+    flex-direction: column; /* Mobile first - stack */
+    gap: 2rem;
+    margin-top: 2rem; /* Space below header */
+}
+
+.docs-sidebar {
+    width: 100%; /* Full width on mobile */
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.docs-sidebar h3 {
+     margin-top: 0;
+     margin-bottom: 1rem;
+     font-size: 1.1rem;
+     border-bottom: 1px solid var(--border-color);
+     padding-bottom: 0.5rem;
+}
+.docs-sidebar ul {
+     list-style: none;
+     margin-left: 0;
+}
+.docs-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.docs-sidebar a {
+     display: block;
+     padding: 0.4rem 0.8rem;
+     border-radius: 4px;
+     color: var(--muted-color);
+     font-weight: 500;
+     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ .docs-sidebar a:hover {
+    background-color: var(--border-color);
+    color: var(--primary-color);
+ }
+ /* Active state can be added with JS if needed, or manually for current section */
+ /* .docs-sidebar a.active {
+     background-color: var(--primary-color);
+     color: var(--white-color);
+ } */
+
+
+.docs-content {
+    width: 100%; /* Full width on mobile */
+}
+
+.docs-content section {
+     margin-bottom: 2.5rem; /* Space between documentation topics */
+     scroll-margin-top: 80px; /* Offset for sticky header when jumping links */
+}
+
+/* Footer (Consistent with index.html) */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+footer p {
+    color: var(--border-color);
+    margin-bottom: 0;
+}
+
+/* --- Responsive Design --- */
+
+/* Medium screens (tablets and larger) */
+@media (min-width: 768px) {
+    .docs-layout {
+        flex-direction: row; /* Side-by-side layout */
+        align-items: flex-start; /* Align items to the top */
+        gap: 2.5rem; /* Increase gap */
+    }
+
+    .docs-sidebar {
+        width: 250px; /* Fixed width for sidebar */
+        flex-shrink: 0; /* Prevent sidebar from shrinking */
+        position: sticky; /* Make sidebar sticky */
+        top: 100px; /* Position below sticky header (adjust based on header height) */
+        max-height: calc(100vh - 120px); /* Limit height and enable scrolling */
+        overflow-y: auto; /* Add scroll if content overflows */
+    }
+
+    .docs-content {
+        flex-grow: 1; /* Allow content to take remaining space */
+    }
+}
+
